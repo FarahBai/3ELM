@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3ELM Educational Platform</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+    <nav>
+        <div class="nav-container">
+            <div onclick="showSection('home')">
+                <span class="logo-badge">3ELM</span>
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="#" onclick="showSection('home')" id="nav-home" class="active-link">Home</a></li>
+                <li><a href="#" onclick="showSection('about')" id="nav-about">About</a></li>
+                <li><a href="#" onclick="showSection('contact')" id="nav-contact">Contact Us</a></li>
+            </ul>
+
+            <div class="nav-buttons">
+                <button onclick="showSection('login')" class="btn-outline-green">
+                    Login
+                </button>
+                <button onclick="showSection('signup')" class="btn-solid-green">
+                    Sign Up
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main id="home-section" class="main-section">
+        <div class="badge-pill">
+            <span><i class="fa-solid fa-rocket mr-2"></i> Start your programming journey</span>
+        </div>
+        
+        <h1>
+            Welcome to <span>3ELM</span> Educational Platform
+        </h1>
+        
+        <p class="desc-text">
+            Your premier destination to learn programming and web development through practical, simple, and organized steps. Start your journey now with our comprehensive JavaScript track.
+        </p>
+        
+        <a href="javascript:void(0)" class="btn-primary" onclick="showSection('signup')">
+            <span>Start Learning Now</span>
+            <i class="fa-solid fa-play"></i>
+        </a>
+    </main>
+
+    <main id="login-section" class="hidden main-section">
+        <div class="form-container">
+            <div style="text-align: center; margin-bottom: 2rem;">
+                <div style="width: 4rem; height: 4rem; margin: 0 auto 1rem auto; border-radius: 1rem; background-color: rgba(99, 102, 241, 0.2); border: 1px solid rgba(99, 102, 241, 0.3); display: flex; align-items: center; justify-content: center; color: #818cf8; font-size: 1.5rem;">
+                    <i class="fa-solid fa-right-to-bracket"></i>
+                </div>
+                <h2 style="font-size: 1.875rem; font-weight: bold; color: #ffffff;">Welcome Back</h2>
+                <p style="color: #94a3b8; font-size: 0.875rem; margin-top: 0.25rem;">Please enter your details to sign in.</p>
+            </div>
+
+            <form id="loginForm">
+                <div class="input-group">
+                    <label>Email Address</label>
+                    <input type="email" placeholder="student@example.com" required>
+                </div>
+                <div class="input-group">
+                    <label>Password</label>
+                    <input type="password" placeholder="••••••••" required>
+                </div>
+                <button type="submit" class="btn-primary" style="width: 100%; justify-content: center; margin-top: 1rem;">
+                    Sign In
+                </button>
+            </form>
+
+            <div style="margin-top: 1.5rem; text-align: center; font-size: 0.75rem; color: #94a3b8;">
+                Don't have an account? 
+                <a href="#" onclick="showSection('signup')" style="color: #818cf8; font-weight: 600; text-decoration: none;">Sign Up</a>
+            </div>
+        </div>
+    </main>
+
+    <main id="signup-section" class="hidden main-section">
+        <div class="form-container">
+            <div style="text-align: center; margin-bottom: 2rem;">
+                <div style="width: 4rem; height: 4rem; margin: 0 auto 1rem auto; border-radius: 1rem; background-color: rgba(22, 163, 74, 0.2); border: 1px solid rgba(22, 163, 74, 0.3); display: flex; align-items: center; justify-content: center; color: #4ade80; font-size: 1.5rem;">
+                    <i class="fa-solid fa-user-plus"></i>
+                </div>
+                <h2 style="font-size: 1.875rem; font-weight: bold; color: #ffffff;">Create Account</h2>
+                <p style="color: #94a3b8; font-size: 0.875rem; margin-top: 0.25rem;">Join 3ELM platform and start learning today.</p>
+            </div>
+
+            <form id="signupForm">
+                <div class="input-group">
+                    <label>Full Name</label>
+                    <input type="text" placeholder="John Doe" required>
+                </div>
+                <div class="input-group">
+                    <label>Email Address</label>
+                    <input type="email" placeholder="student@example.com" required>
+                </div>
+                <div class="input-group">
+                    <label>Password</label>
+                    <input type="password" placeholder="••••••••" required>
+                </div>
+                <button type="submit" class="btn-solid-green" style="width: 100%; padding: 0.875rem; margin-top: 1rem;">
+                    Create Account
+                </button>
+            </form>
+
+            <div style="margin-top: 1.5rem; text-align: center; font-size: 0.75rem; color: #94a3b8;">
+                Already have an account? 
+                <a href="#" onclick="showSection('login')" style="color: #4ade80; font-weight: 600; text-decoration: none;">Login</a>
+            </div>
+        </div>
+    </main>
+
+    <main id="contact-section" class="hidden main-section max-layout" style="padding-top: 2rem;">
+        <div style="text-align: center; max-width: 48rem; margin: 0 auto 3rem auto;">
+            <div class="badge-pill">
+                <span><i class="fa-solid fa-envelope-open-text mr-2"></i> Get In Touch</span>
+            </div>
+            <h2 style="font-size: 2.25rem; font-weight: bold; color: #ffffff; margin-bottom: 1rem;">Contact Our Team</h2>
+            <p style="color: #94a3b8;">Have questions or need assistance? Reach out to us through any of the channels below or send us a message directly.</p>
+        </div>
+
+        <div class="grid-2">
+            <div style="display: flex; flex-direction: column; gap: 1rem;">
+                <div class="card-box" style="display: flex; align-items: center; gap: 1.25rem;">
+                    <div style="width: 3.5rem; height: 3.5rem; background: rgba(99, 102, 241, 0.2); border-radius: 0.75rem; display: flex; align-items: center; justify-content: center; color: #818cf8; font-size: 1.25rem;">
+                        <i class="fa-solid fa-phone"></i>
+                    </div>
+                    <div>
+                        <h4 style="font-size: 0.75rem; color: #94a3b8; text-transform: uppercase;">Egyptian Landline</h4>
+                        <p style="font-size: 1.125rem; font-weight: bold; color: #ffffff; margin-top: 0.25rem;">+20 (2) 2791 3356</p>
+                    </div>
+                </div>
+
+                <div class="card-box" style="display: flex; align-items: center; gap: 1.25rem;">
+                    <div style="width: 3.5rem; height: 3.5rem; background: rgba(16, 185, 129, 0.2); border-radius: 0.75rem; display: flex; align-items: center; justify-content: center; color: #34d399; font-size: 1.25rem;">
+                        <i class="fa-solid fa-envelope"></i>
+                    </div>
+                    <div>
+                        <h4 style="font-size: 0.75rem; color: #94a3b8; text-transform: uppercase;">Email Address</h4>
+                        <p style="font-size: 1.125rem; font-weight: bold; color: #ffffff; margin-top: 0.25rem;">support@3elm.com</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="span-2 card-box" style="padding: 2rem;">
+                <h3 style="font-size: 1.5rem; font-weight: bold; color: #ffffff; margin-bottom: 1.5rem;">
+                    <i class="fa-solid fa-paper-plane" style="color: #818cf8; margin-left: 0.5rem;"></i> Send Us a Message
+                </h3>
+                <form onsubmit="return false;">
+                    <div class="input-group">
+                        <label>Your Name</label>
+                        <input type="text" placeholder="John Doe">
+                    </div>
+                    <div class="input-group">
+                        <label>Your Email</label>
+                        <input type="email" placeholder="john@example.com">
+                    </div>
+                    <div class="input-group">
+                        <label>Message</label>
+                        <textarea rows="4" placeholder="How can we help you?"></textarea>
+                    </div>
+                    <button type="button" class="btn-primary">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <main id="about-section" class="hidden main-section max-layout" style="padding-top: 2rem;">
+        <div style="text-align: center; max-width: 48rem; margin: 0 auto 3rem auto;">
+            <div class="badge-pill">
+                <span><i class="fa-solid fa-users mr-2"></i> Who We Are</span>
+            </div>
+            <h2 style="font-size: 2.25rem; font-weight: bold; color: #ffffff; margin-bottom: 1rem;">About <span style="color: #6366f1;">3ELM</span></h2>
+            <p style="color: #94a3b8; line-height: 1.6;">
+                We are a passionate team of developers and educators who created <strong style="color: #818cf8;">3ELM</strong> to help students and aspiring developers learn programming easily through structured, practical tracks.
+            </p>
+        </div>
+
+        <div class="grid-4">
+            <div class="card-box" style="text-align: center;">
+                <div style="width: 5rem; height: 5rem; margin: 0 auto 1rem auto; border-radius: 50%; background-color: #334155; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; color: #fff;">
+                    <i class="fa-solid fa-user"></i>
+                </div>
+                <h3 style="font-size: 1.25rem; font-weight: bold; color: #fff;">Sara</h3>
+                <p style="font-size: 0.75rem; color: #818cf8; margin-top: 0.25rem;">Co-Founder & Developer</p>
+            </div>
+
+            <div class="card-box" style="text-align: center;">
+                <div style="width: 5rem; height: 5rem; margin: 0 auto 1rem auto; border-radius: 50%; background-color: #334155; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; color: #fff;">
+                    <i class="fa-solid fa-user"></i>
+                </div>
+                <h3 style="font-size: 1.25rem; font-weight: bold; color: #fff;">Farah</h3>
+                <p style="font-size: 0.75rem; color: #34d399; margin-top: 0.25rem;">Co-Founder & Developer</p>
+            </div>
+
+            <div class="card-box" style="text-align: center;">
+                <div style="width: 5rem; height: 5rem; margin: 0 auto 1rem auto; border-radius: 50%; background-color: #334155; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; color: #fff;">
+                    <i class="fa-solid fa-user"></i>
+                </div>
+                <h3 style="font-size: 1.25rem; font-weight: bold; color: #fff;">Mariam</h3>
+                <p style="font-size: 0.75rem; color: #38bdf8; margin-top: 0.25rem;">Co-Founder & Developer</p>
+            </div>
+
+            <div class="card-box" style="text-align: center;">
+                <div style="width: 5rem; height: 5rem; margin: 0 auto 1rem auto; border-radius: 50%; background-color: #334155; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; color: #fff;">
+                    <i class="fa-solid fa-user"></i>
+                </div>
+                <h3 style="font-size: 1.25rem; font-weight: bold; color: #fff;">Mohamed</h3>
+                <p style="font-size: 0.75rem; color: #fbbf24; margin-top: 0.25rem;">Co-Founder & Developer</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>All rights reserved © 3ELM Educational Platform 2026</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

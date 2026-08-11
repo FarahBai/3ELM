@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3ELM Educational Platform</title>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="nav-container">
+            <a href="#" class="nav-item" data-target="home-section" style="text-decoration: none;">
+                <span class="logo-badge">3ELM</span>
+            </a>
+
+            <ul class="nav-links">
+                <li><a href="#" class="nav-item active-link" data-target="home-section">Home</a></li>
+                <li><a href="#" class="nav-item" data-target="about-section">About</a></li>
+                <li><a href="#" class="nav-item" data-target="contact-section">Contact Us</a></li>
+                <li><a href="#" class="nav-item" data-target="classroom-section">Classroom</a></li>
+            </ul>
+
+            <div class="img">
+                <i class="fas fa-user"></i>
+                <button onclick="logout()" style="background:#ef4444; color:white; border:none; padding:8px 16px; border-radius:8px; cursor:pointer; font-size:0.875rem;">
+                    Log Out
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        
+        <!-- HOME SECTION -->
+        <section id="home-section" class="page-section">
+            <div class="info-card">
+                <div class="badge-pill">
+                    <span><i class="fa-solid fa-rocket"></i> Start your programming journey</span>
+                </div>
+                <h1>Welcome to <span>3ELM</span> Educational Platform</h1>
+                <p class="desc-text">Select a learning module below or use the navigation bar to start your masterclass.</p>
+
+                <!-- COURSE MODULES SECTION -->
+                <div style="margin-top: 2.5rem; text-align: left;">
+                    <h3 style="font-size: 1.25rem; font-weight: bold; color: #ffffff; margin-bottom: 1rem;">Course Modules</h3>
+                    
+                    <div class="card-box nav-item" data-target="classroom-section" style="cursor: pointer; display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap;">
+                        <div>
+                            <span id="weeks" style="margin-bottom: 0.5rem; display: inline-block; width: auto; padding: 0.25rem 0.875rem;">WEEK 1</span>
+                            <h4 style="font-size: 1.125rem; font-weight: bold; color: #ffffff; margin: 0.25rem 0 0 0;">Backend Engineering Masterclass</h4>
+                            <p style="font-size: 0.875rem; color: #94a3b8; margin-top: 0.25rem;">API Design, Concepts, and Architecture Learning Module</p>
+                        </div>
+                        <a href="#" class="btn-primary nav-item" data-target="classroom-section" style="padding: 0.625rem 1.25rem; font-size: 0.875rem; text-decoration: none;">
+                            Go to Week 1 <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- CERTIFICATES SECTION -->
+                <div style="margin-top: 2rem; text-align: left;">
+                    <h3 style="font-size: 1.25rem; font-weight: bold; color: #ffffff; margin-bottom: 1rem;">Your Certificates</h3>
+                    
+                    <div id="certCard" class="card-box" style="cursor: pointer; display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap;">
+                        <div style="display: flex; align-items: center; gap: 1rem;">
+                            <div class="icon-box" style="background: rgba(234, 179, 8, 0.2); color: #fbbf24;">
+                                <i class="fa-solid fa-award"></i>
+                            </div>
+                            <div>
+                                <h4 style="font-size: 1.125rem; font-weight: bold; color: #ffffff; margin: 0;">My Certificates</h4>
+                                <p style="font-size: 0.875rem; color: #94a3b8; margin-top: 0.25rem;">View your earned course completion certificates</p>
+                            </div>
+                        </div>
+                        <button type="button" class="btn-primary" style="padding: 0.625rem 1.25rem; font-size: 0.875rem; background-color: #334155;">
+                            View Certificates
+                        </button>
+                    </div>
+                    <div id="certMessage" class="feedback" style="margin-top: 1rem;"></div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ABOUT SECTION -->
+        <section id="about-section" class="page-section max-layout hidden">
+            <div style="text-align: center; max-width: 48rem; margin: 0 auto 3rem auto;">
+                <div class="badge-pill">
+                    <span><i class="fa-solid fa-users"></i> Who We Are</span>
+                </div>
+                <h2 style="font-size: 2.25rem; font-weight: bold; color: #ffffff; margin-bottom: 1rem;">About <span style="color: #6366f1;">3ELM</span></h2>
+                <p style="color: #94a3b8; line-height: 1.6;">
+                    We are a passionate team of developers and educators who created <strong style="color: #818cf8;">3ELM</strong> to help students and aspiring developers learn programming easily through structured, practical tracks.
+                </p>
+            </div>
+
+            <div class="grid-4">
+                <div class="card-box" style="text-align: center;">
+                    <div class="avatar-icon"><i class="fa-solid fa-user"></i></div>
+                    <h3 style="font-size: 1.25rem; font-weight: bold; color: #fff;">Sara</h3>
+                    <p style="font-size: 0.75rem; color: #818cf8; margin-top: 0.25rem;">Co-Founder & Developer</p>
+                </div>
+                <div class="card-box" style="text-align: center;">
+                    <div class="avatar-icon"><i class="fa-solid fa-user"></i></div>
+                    <h3 style="font-size: 1.25rem; font-weight: bold; color: #fff;">Farah</h3>
+                    <p style="font-size: 0.75rem; color: #34d399; margin-top: 0.25rem;">Co-Founder & Developer</p>
+                </div>
+                <div class="card-box" style="text-align: center;">
+                    <div class="avatar-icon"><i class="fa-solid fa-user"></i></div>
+                    <h3 style="font-size: 1.25rem; font-weight: bold; color: #fff;">Mariam</h3>
+                    <p style="font-size: 0.75rem; color: #38bdf8; margin-top: 0.25rem;">Co-Founder & Developer</p>
+                </div>
+                <div class="card-box" style="text-align: center;">
+                    <div class="avatar-icon"><i class="fa-solid fa-user"></i></div>
+                    <h3 style="font-size: 1.25rem; font-weight: bold; color: #fff;">Mohamed</h3>
+                    <p style="font-size: 0.75rem; color: #fbbf24; margin-top: 0.25rem;">Co-Founder & Developer</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT SECTION -->
+        <section id="contact-section" class="page-section max-layout hidden">
+            <div style="text-align: center; max-width: 48rem; margin: 0 auto 3rem auto;">
+                <div class="badge-pill">
+                    <span><i class="fa-solid fa-envelope-open-text"></i> Get In Touch</span>
+                </div>
+                <h2 style="font-size: 2.25rem; font-weight: bold; color: #ffffff; margin-bottom: 1rem;">Contact Our Team</h2>
+                <p style="color: #94a3b8;">Have questions or need assistance? Reach out to us through any of the channels below or send us a message directly.</p>
+            </div>
+
+            <div class="grid-2">
+                <div style="display: flex; flex-direction: column; gap: 1rem;">
+                    <div class="card-box" style="display: flex; align-items: center; gap: 1.25rem;">
+                        <div class="icon-box" style="background: rgba(99, 102, 241, 0.2); color: #818cf8;">
+                            <i class="fa-solid fa-phone"></i>
+                        </div>
+                        <div>
+                            <h4 style="font-size: 0.75rem; color: #94a3b8; text-transform: uppercase;">Egyptian Landline</h4>
+                            <p style="font-size: 1.125rem; font-weight: bold; color: #ffffff; margin-top: 0.25rem;">+20 (2) 2791 3356</p>
+                        </div>
+                    </div>
+
+                    <div class="card-box" style="display: flex; align-items: center; gap: 1.25rem;">
+                        <div class="icon-box" style="background: rgba(16, 185, 129, 0.2); color: #34d399;">
+                            <i class="fa-solid fa-envelope"></i>
+                        </div>
+                        <div>
+                            <h4 style="font-size: 0.75rem; color: #94a3b8; text-transform: uppercase;">Email Address</h4>
+                            <p style="font-size: 1.125rem; font-weight: bold; color: #ffffff; margin-top: 0.25rem;">support@3elm.com</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="span-2 card-box" style="padding: 2rem; text-align: left;">
+                    <h3 style="font-size: 1.5rem; font-weight: bold; color: #ffffff; margin-bottom: 1.5rem;">
+                        <i class="fa-solid fa-paper-plane" style="color: #818cf8; margin-right: 0.5rem;"></i> Send Us a Message
+                    </h3>
+                    <form onsubmit="return false;">
+                        <div class="input-group">
+                            <label>Your Name</label>
+                            <input type="text" placeholder="John Doe">
+                        </div>
+                        <div class="input-group">
+                            <label>Your Email</label>
+                            <input type="email" placeholder="john@example.com">
+                        </div>
+                        <div class="input-group">
+                            <label>Message</label>
+                            <textarea rows="4" placeholder="How can we help you?"></textarea>
+                        </div>
+                        <button type="button" class="btn-primary" style="width: 100%; justify-content: center;">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- CLASSROOM SECTION -->
+        <section id="classroom-section" class="page-section hidden">
+            <header>
+                <h1>Backend Engineering Masterclass</h1>
+                <p>API Design, Concepts, and Architecture Learning Module</p>
+            </header>
+
+            <div class="video-card">
+                <p id="weeks">WEEK 1</p>
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/XvFmUE-36Kc" title="API Design and Architecture" allowfullscreen></iframe>
+                </div>
+                <div class="content-section">
+                    <h2>Video Summary</h2>
+                    <p class="summary-text">
+                        What is an API?: An Application Programming Interface (API) acts as a bridge allowing different software systems to communicate.<br><br>
+                        Core Principles of RESTful Design:<br>
+                        • Resource-Centric URIs: Use clean nouns instead of verbs in endpoints.<br>
+                        • Standard HTTP Methods: Use proper verbs like GET, POST, PUT, and DELETE.<br>
+                        • Predictable Status Codes: Leverage standard HTTP statuses.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Quiz Section -->
+            <div class="quiz-container">
+                <h2>Knowledge Check (MCQ Quiz)</h2>
+                
+                <form id="quizForm">
+                    <div class="question-box" id="qb1">
+                        <div class="question-title">1. What does the acronym API stand for?</div>
+                        <div class="options">
+                            <label><input type="radio" name="q1" value="a"> Application Process Integration</label>
+                            <label><input type="radio" name="q1" value="b"> Application Programming Interface</label>
+                            <label><input type="radio" name="q1" value="c"> Advanced Protocol Interaction</label>
+                            <label><input type="radio" name="q1" value="d"> Automated Program Integration</label>
+                        </div>
+                        <div class="feedback" id="feedback1"></div>
+                    </div>
+
+                    <div class="question-box" id="qb2">
+                        <div class="question-title">2. Which HTTP method is typically used to create or add new data on the server?</div>
+                        <div class="options">
+                            <label><input type="radio" name="q2" value="a"> GET</label>
+                            <label><input type="radio" name="q2" value="b"> DELETE</label>
+                            <label><input type="radio" name="q2" value="c"> POST</label>
+                            <label><input type="radio" name="q2" value="d"> PATCH</label>
+                        </div>
+                        <div class="feedback" id="feedback2"></div>
+                    </div>
+
+                    <div class="question-box" id="qb3">
+                        <div class="question-title">3. Which data format is standard, lightweight, and most commonly used with REST APIs?</div>
+                        <div class="options">
+                            <label><input type="radio" name="q3" value="a"> XML</label>
+                            <label><input type="radio" name="q3" value="b"> JSON</label>
+                            <label><input type="radio" name="q3" value="c"> CSV</label>
+                            <label><input type="radio" name="q3" value="d"> YAML</label>
+                        </div>
+                        <div class="feedback" id="feedback3"></div>
+                    </div>
+
+                    <button type="button" id="submitBtn" class="submit-btn">Submit Answers</button>
+                    <div id="finalScore" class="final-score"></div>
+                </form>
+            </div>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>All rights reserved © 3ELM Educational Platform 2026</p>
+    </footer>
+
+    <script src="code.js"></script>
+</body>
+</html>
